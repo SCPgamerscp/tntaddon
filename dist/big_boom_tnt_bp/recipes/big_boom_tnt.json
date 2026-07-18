@@ -1,0 +1,25 @@
+{
+  "format_version": "1.21.0",
+  "minecraft:recipe_shapeless": {
+    "description": {
+      "identifier": "bigboomtnt:big_boom_tnt"
+    },
+    "tags": ["crafting_table"],
+    "ingredients": [
+      {
+        "item": "minecraft:redstone_block"
+      },
+      {
+        "item": "minecraft:tnt"
+      }
+    ],
+    "result": {
+      "item": "bigboomtnt:big_boom_tnt"
+    },
+    "unlock": [
+      {
+        "item": "minecraft:redstone_block"
+      }
+    ]
+  }
+}

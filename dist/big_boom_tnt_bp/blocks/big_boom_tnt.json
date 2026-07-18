@@ -1,0 +1,51 @@
+{
+  "format_version": "1.21.60",
+  "minecraft:block": {
+    "description": {
+      "identifier": "bigboomtnt:big_boom_tnt",
+      "menu_category": {
+        "category": "items",
+        "group": "minecraft:itemGroup.name.tnt"
+      }
+    },
+    "components": {
+      "minecraft:destructible_by_mining": {
+        "seconds_to_destroy": 0
+      },
+      "minecraft:destructible_by_explosion": {
+        "explosion_resistance": 0
+      },
+      "minecraft:flammable": {
+        "catch_chance_modifier": 0,
+        "destroy_chance_modifier": 0
+      },
+      "minecraft:friction": 0.4,
+      "minecraft:map_color": "#DD3F3B",
+      "minecraft:display_name": "tile.bigboomtnt:big_boom_tnt.name",
+      "minecraft:geometry": "minecraft:geometry.full_block",
+      "minecraft:material_instances": {
+        "up": { "texture": "big_boom_tnt_top", "render_method": "opaque" },
+        "down": { "texture": "big_boom_tnt_bottom", "render_method": "opaque" },
+        "*": { "texture": "big_boom_tnt_side", "render_method": "opaque" }
+      },
+      "minecraft:on_interact": {
+        "condition": "query.is_item_name_any('slot.weapon.mainhand', 0, 'minecraft:flint_and_steel')",
+        "event": "bigboomtnt:ignite"
+      }
+    },
+    "events": {
+      "bigboomtnt:ignite": {
+        "run_command": {
+          "command": [
+            "playsound fire.ignite @a[r=16] ~ ~ ~ 1 1",
+            "summon bigboomtnt:primed_big_boom_tnt ~0.5 ~0.5 ~0.5"
+          ],
+          "target": "self"
+        },
+        "set_block": {
+          "block_type": "minecraft:air"
+        }
+      }
+    }
+  }
+}

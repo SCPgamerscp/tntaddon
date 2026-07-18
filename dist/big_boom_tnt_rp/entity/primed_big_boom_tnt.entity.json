@@ -1,0 +1,26 @@
+{
+  "format_version": "1.16.0",
+  "minecraft:client_entity": {
+    "description": {
+      "identifier": "bigboomtnt:primed_big_boom_tnt",
+      "materials": {
+        "default": "entity_alphatest"
+      },
+      "textures": {
+        "default": "textures/entity/big_boom_tnt_atlas"
+      },
+      "geometry": {
+        "default": "geometry.big_boom_tnt"
+      },
+      "scripts": {
+        "pre_animation": [
+          "variable.tnt_scale = 1.0 + (Math.sin(query.age * 1440.0) * 0.02);"
+        ],
+        "scale": "variable.tnt_scale"
+      },
+      "render_controllers": [
+        "controller.render.default"
+      ]
+    }
+  }
+}
