@@ -28,6 +28,10 @@
         "down": { "texture": "big_boom_tnt_bottom", "render_method": "opaque" },
         "*": { "texture": "big_boom_tnt_side", "render_method": "opaque" }
       },
+      "minecraft:tick": {
+        "interval_range": [1, 1],
+        "looping": true
+      },
       "bigboomtnt:ignite_component": {}
     }
   }

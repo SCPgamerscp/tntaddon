@@ -21,9 +21,9 @@
 
 ## 実装のポイント
 
-- スクリプトAPI（Beta APIsトグル）を使わず、**JSON定義のみ**で実装しています。
-  - ブロックの起爆判定は `minecraft:on_interact` コンポーネントと `query.is_item_name_any` Molangクエリでフリント&スティールを検知。
-  - 起爆時は `run_command` の `summon` コマンドでカスタムのprimed TNTエンティティを生成し、元のブロックは `air` に変換。
+- 安定版の Script API（`@minecraft/server` 1.14.0）とカスタムブロックコンポーネントを使用しています（Beta APIsトグルは不要です）。
+  - `onPlayerInteract` でフリント&スティールを検知し、`onTick` でレッドストーン信号を検知します。
+  - 起爆時はカスタムのprimed TNTエンティティを生成し、元のブロックを `air` に変換します。
   - 起爆エンティティ側は `minecraft:explode` コンポーネントで `power: 200`, `fuse_length: 10`, `fuse_lit: true` を設定。
 - テクスチャは公式 Mojang/bedrock-samples リポジトリのバニラTNTブロックテクスチャをそのまま利用し、見た目の完全な一致を実現しています。
 
@@ -37,6 +37,7 @@ dist/
 │   ├── blocks/big_boom_tnt.json
 │   ├── entities/primed_big_boom_tnt.json
 │   ├── recipes/big_boom_tnt.json
+│   ├── scripts/main.js
 │   └── texts/ (en_US.lang, ja_JP.lang, languages.json)
 └── big_boom_tnt_rp/            # Resource Pack
     ├── manifest.json
@@ -70,3 +71,10 @@ dist/
    上記コンポーネント要件に合わせて `min_engine_version` を `[1, 21, 60]` に更新しました。
 
 これらの修正により、ブロック定義のパースエラーが解消され、「大爆発TNT」がクリエイティブインベントリ・クラフトレシピ経由で正常に入手・設置・起爆できるようになりました。
+
+### v1.0.4
+
+- Behavior Packが参照するResource PackのUUID・バージョン不一致を修正しました。
+- Resource Packの誤った最低エンジンバージョン `1.26.30` を `1.21.60` に修正しました。
+- `.mcaddon` をBehavior Pack / Resource Packの2つの`.mcpack`を含む正しい構造で再生成しました。
+- レッドストーン信号による起爆処理を追加しました。
