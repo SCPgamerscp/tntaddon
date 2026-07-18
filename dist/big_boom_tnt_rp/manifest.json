@@ -1,0 +1,18 @@
+{
+    "format_version": 2,
+    "header": {
+        "name": "大爆発TNT",
+        "description": "爆発力200・起爆10秒の大爆発TNTを追加するアドオン (Resource Pack)",
+        "uuid": "ddd4b1c0-f534-4070-b31f-d0d93756eda9",
+        "version": [1, 0, 0],
+        "min_engine_version": [1, 21, 60]
+    },
+    "modules": [
+        {
+            "description": "大爆発TNT Resource Pack",
+            "type": "resources",
+            "uuid": "9371ac93-9e24-458f-a6fe-7fe176fec821",
+            "version": [1, 0, 0]
+        }
+    ]
+}

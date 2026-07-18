@@ -1,0 +1,8 @@
+tile.bigboomtnt:big_boom_tnt.name=大爆発TNT
+item.bigboomtnt:big_boom_tnt.name=大爆発TNT
+entity.bigboomtnt:primed_big_boom_tnt.name=大爆発TNT
+
+itemGroup.name.tnt=TNT
+
+pack.name=大爆発TNT
+pack.description=爆発力200・起爆10秒の大爆発TNTを追加するアドオン

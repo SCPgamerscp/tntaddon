@@ -1,0 +1,8 @@
+tile.bigboomtnt:big_boom_tnt.name=Big Boom TNT
+item.bigboomtnt:big_boom_tnt.name=Big Boom TNT
+entity.bigboomtnt:primed_big_boom_tnt.name=Big Boom TNT
+
+itemGroup.name.tnt=TNT
+
+pack.name=Big Boom TNT
+pack.description=Adds a TNT with explosion power 200 and a 10-second fuse.
