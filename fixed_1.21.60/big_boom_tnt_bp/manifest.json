@@ -1,0 +1,36 @@
+{
+  "format_version": 2,
+  "header": {
+    "name": "大爆発TNT BP (Fixed)",
+    "description": "爆発力200・起爆10秒の大爆発TNT Behavior Pack",
+    "uuid": "b8e4f6b2-0c8a-4d91-a6b7-2d5c9f1e7a43",
+    "version": [1, 0, 2],
+    "min_engine_version": [1, 21, 60]
+  },
+  "modules": [
+    {
+      "description": "大爆発TNT Behavior Pack",
+      "type": "data",
+      "uuid": "3f2a9c71-6d4e-48b5-91c0-e7a2f6d8b314",
+      "version": [1, 0, 2]
+    },
+    {
+      "description": "大爆発TNT Script",
+      "type": "script",
+      "language": "javascript",
+      "uuid": "6c1d8e52-a9f3-4b70-85d6-2e7c4a1f9b63",
+      "version": [1, 0, 2],
+      "entry": "scripts/main.js"
+    }
+  ],
+  "dependencies": [
+    {
+      "uuid": "e2c7a1f9-5b63-4d80-92e4-6a8f3c1b7d50",
+      "version": [1, 0, 2]
+    },
+    {
+      "module_name": "@minecraft/server",
+      "version": "1.14.0"
+    }
+  ]
+}
