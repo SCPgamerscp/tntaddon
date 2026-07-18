@@ -3,22 +3,34 @@
     "header": {
         "name": "大爆発TNT",
         "description": "爆発力200・起爆10秒の大爆発TNTを追加するアドオン (Behavior Pack)",
-        "uuid": "d1b27d81-7c05-4489-94ae-cbbc1bf10961",
-        "version": [1, 0, 0],
-        "min_engine_version": [1, 21, 60]
+        "uuid": "5d5d85d8-8ed9-4d37-8f5b-dd00e8b28eda",
+        "version": [1, 0, 1],
+        "min_engine_version": [1, 26, 30]
     },
     "modules": [
         {
             "description": "大爆発TNT Behavior Pack",
             "type": "data",
-            "uuid": "2764122e-73c3-4d19-9819-59e7e8c185ea",
-            "version": [1, 0, 0]
+            "uuid": "5923fdb1-7b77-402b-9a9c-ce77d535d4f4",
+            "version": [1, 0, 1]
+        },
+        {
+            "description": "大爆発TNT Script",
+            "type": "script",
+            "language": "javascript",
+            "uuid": "30dc30ad-d773-4027-8d3b-e65b89a21fee",
+            "version": [1, 0, 1],
+            "entry": "scripts/main.js"
         }
     ],
     "dependencies": [
         {
-            "uuid": "ddd4b1c0-f534-4070-b31f-d0d93756eda9",
-            "version": [1, 0, 0]
+            "uuid": "7a56fb2d-fa01-47f0-86aa-76a501e6f289",
+            "version": [1, 0, 1]
+        },
+        {
+            "module_name": "@minecraft/server",
+            "version": "1.14.0"
         }
     ]
 }
